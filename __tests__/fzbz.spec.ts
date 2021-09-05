@@ -1,9 +1,9 @@
-import { fizzbuzz, mapNumCall } from "../src/fzbz";
-import { maps } from "../src/num-call";
+import { fizzbuzz } from "../src/fzbz";
+import { example357 } from "../src/num-sound";
 
-export const FIZZ = maps[0].val;
-export const BUZZ = maps[1].val;
-export const MEZZ = maps[2].val;
+export const FIZZ = example357[0].val;
+export const BUZZ = example357[1].val;
+export const MEZZ = example357[2].val;
 
 test('fizzbuzz testing: ', () => {
   expect(fizzbuzz(1)).toBe('1');
@@ -17,23 +17,4 @@ test('fizzbuzz testing: ', () => {
   expect(fizzbuzz(53)).toBe(FIZZ + BUZZ);
   expect(fizzbuzz(73)).toBe(FIZZ + MEZZ);
   expect(fizzbuzz(75)).toBe(FIZZ + BUZZ + MEZZ);
-})
-
-test('should have a map for fizz and buzz', () => {
-  expect(maps[0].val).toBe(FIZZ)
-  expect(maps[1].val).toBe(BUZZ)
-})
-
-test('get keys of a object, and reduce fn', () => {
-  const r = maps.reduce((p, c) => p + c.val, '')
-  expect(r).toBe(FIZZ + BUZZ + MEZZ)
-})
-
-test('num call correct', () => {
-  expect(mapNumCall(maps[0], 2)).toBe('')
-  expect(mapNumCall(maps[0], 3)).toBe(FIZZ)
-  expect(mapNumCall(maps[0], 5)).toBe('')
-  expect(mapNumCall(maps[1], 5)).toBe(BUZZ)
-  expect(mapNumCall(maps[0], 13)).toBe(FIZZ)
-  expect(mapNumCall(maps[1], 53)).toBe(BUZZ)
 })

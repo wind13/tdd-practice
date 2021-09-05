@@ -10,5 +10,5 @@
 
 ![week money](./week-money.png)
 
-![week money calc](./week-money-calc.png)
+![week money calc](./week-money-calc.jpeg)
 

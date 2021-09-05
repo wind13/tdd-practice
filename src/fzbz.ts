@@ -1,12 +1,7 @@
-import { isRelated } from "./common";
-import { NumCall, maps } from "./num-call";
-
-export function mapNumCall(c:NumCall, n: number) {
-  return isRelated(c.num, n) ? c.val : ''
-}
+import { example357, matchSound } from "./num-sound";
 
 export function fizzbuzz(n:number) {
-  const s = maps.reduce((p, c) => p + mapNumCall(c, n), '')
+  const s = example357.reduce((p, c) => p + matchSound(c, n), '')
   return s === '' ? s + n : s;
 }
 
